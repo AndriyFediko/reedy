@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="lightContainer">
+            <img src="./img/light-bulb.png" alt="lamp" class="lightContainer__Lamp">
+            <div class="lightContainer__Indicator">
+                <div class="lightStatus"></div>
+            </div>
+            <span class="lightStatus__text">OFF</span>
+        </div>
+        <header>
+            <div class="textSpeed">
+                <input value="500" min="200" max="2000" step="100" type="range" class="readingSpeed" id="readingSpeed">
+                <span class="inputVal" id="inputVal">500</span>
+            </div>
+        </header>
+        <textarea id="textArea" class="textArea" cols="30" rows="10"></textarea>
+        <div class="readBlock" id="readBlock">
+            <div class="box"></div>
+            <span id="readText" class="readText"></span>
+            <div class="box"></div>
+        </div>
+        <button id="start" class="start">Go !</button>
+        <button class="start pauseBtn" id="pauseBtn">
+            <div class="status">
+                <div class="pauseBox"></div>
+                <div class="pauseBox"></div>
+            </div>
+            <div class="triangle"></div>
+        </button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

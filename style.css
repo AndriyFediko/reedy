@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    outline: none;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 0 50px 0;
+    transition: 0.3s;
+}
+
+.textSpeed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.readingSpeed {
+    width: 200px;
+}
+
+.inputVal {
+    color: white;
+    font-size: 2.5em;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.textArea {
+    width: 800px;
+    height: 400px;
+    background-color: #222;
+    box-shadow: 0 0 10px #000;
+    outline: none;
+    border: none;
+    resize: none;
+    margin: 50px 0;
+    color: white;
+    padding: 10px;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+.start {
+    width: 200px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: white;
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.readText {
+    font-size: 4em;
+    color: white;
+    transition: color 0.3s;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.readBlock {
+    width: 100%;
+    height: 130px;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 130px;
+}
+
+.readBlock .box {
+    width: 2px;
+    background-color: #888;
+    height: 15px;
+}
+
+header {
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.lightContainer__Lamp {
+    width: 45px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.lightContainer__Indicator {
+    width: 50px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 20px;
+    border: 2px solid #888;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lightStatus {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.3s;
+    position: relative;
+    left: 0px;
+    transition: 0.3s;
+    background-color: red;
+}
+
+.lightStatus__active {
+    left: 26px;
+    background-color: chartreuse;
+}
+
+.lightStatus__text {
+    font-size: 0.8em;
+    margin-top: 5px;
+    color: #aaa;
+}
+
+.pauseBtn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.status {
+    height: 40px;
+    width: 25px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pauseBox {
+    width: 6px;
+    height: 30px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 30px;
+    border-color: transparent transparent transparent white;
+    position: relative;
+    left: 5px;
+    transition: 0.3s;
+}
+@media screen and (max-width:1100px){
+    .textArea{
+        width: 80%;
+        height: 300px;
+    }
+}
+@media screen and (max-width:500px){
+    .readingSpeed{
+        width: 150px;
+    }
+    .readText{
+        font-size: 3em;
+    }
+    .readBlock{
+        height: 120px;
+    }
+}
